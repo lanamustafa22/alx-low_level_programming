@@ -1,26 +1,5 @@
 #include "main.h"
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
-void positive_or_negative(int i)
-{
-int n;
-srand(time(0));
-n = i;
-if (n == 0)
-{
-printf("%d is zero\n", n);
-}
-else if (n < 0)
-{
-printf("%d is negative\n", n);
-}
-else if (n > 0)
-{
-printf("%d is positive\n", n);
-}
-return (0);
-}
+
 /**
 *main -  test that the function positive_or_negative
 *
