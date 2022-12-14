@@ -1,1 +1,1 @@
-C - Variables, if, else, while
+0x03. C - Debugging
