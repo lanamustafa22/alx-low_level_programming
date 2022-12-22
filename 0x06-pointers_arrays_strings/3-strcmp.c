@@ -2,23 +2,34 @@
 
 /**
 *_strcmp - function that compares two strings
-*@*s1: first string
-*@*s2: second string
-*Return: int
+*@s1: first string
+*@s2: second string
+*Return: 0, positive , negative
 *
 */
 int _strcmp(char *s1, char *s2)
 {
-while (((*s1 != '\0') && (*s2 != '\0')) && (*s1 == *s2))
+int i = 0, diff = 0;
+while (1)
 {
-s1++;
-s2++;
+if (s1[i] == '\0' && s2[i] == '\0')
+break;
+else if (s1[i] == '\0')
+{
+diff = s2[i];
+break;
 }
-if (*s1 == *s2)
+else if (s2[i] == '\0')
+diff = s1[i];
+break;
+}
+else if (s1[i] != s2[i])
 {
-return (0);
+diff = s1[i] - s2[i];
+break;
 }
 else
-{
-return (*s1 - *s2);
+i++;
+}
+return (diff);
 }
